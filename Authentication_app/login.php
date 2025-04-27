@@ -63,8 +63,10 @@ if(isset($_POST['btn_login'])){
         <div class="container">
             <a class="navbar-brand" href="#">AuthSystem</a>
             <div id="auth-buttons">
-                <button class="btn btn-light me-2" onclick="showForm('login')">Login</button>
-                <button class="btn btn-outline-light" onclick="showForm('register')">Register</button>
+                <!-- <button class="btn btn-light me-2" onclick="showForm('login.php')">Login</button> -->
+                <!-- <button class="btn btn-outline-light" onclick="showForm('register.php')">Register</button> -->
+              <a class="btn btn-light me-2" href="login.php">Login</a>
+                <a class="btn btn-outline-light" href="Register.php">Register</a>
             </div>
         </div>
     </nav>

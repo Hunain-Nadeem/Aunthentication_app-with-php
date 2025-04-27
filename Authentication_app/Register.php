@@ -30,9 +30,9 @@
         <div class="container">
             <a class="navbar-brand" href="#">AuthSystem</a>
             <div id="auth-buttons">
-                <button class="btn btn-light me-2" onclick="showForm('login')">Login</button>
-                <button class="btn btn-outline-light" onclick="showForm('register')">Register</button>
-            </div>
+            <a class="btn btn-light me-2" href="login.php">Login</a>
+                <a class="btn btn-outline-light" href="Register.php">Register</a>
+             </div>
         </div>
     </nav>
 
@@ -41,29 +41,29 @@
     <div class="card auth-card" id="register-form">
         <div class="card-body">
             <h4 class="card-title text-center mb-4">Register</h4>
-            <form method="post">
+            <form action="" method="post">
                 <div class="mb-3">
                     <label class="form-label">Full Name</label>
                     <input name="username" type="text" class="form-control" placeholder="John Doe" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Email</label>
-                    <input type="email" class="form-control" placeholder="your@email.com" required>
+                    <input name="email" type="email" class="form-control" placeholder="your@email.com" required>
                 </div>
                 <div class="mb-3 position-relative">
                     <label class="form-label">Password</label>
-                    <input type="password" class="form-control" id="reg-password" required>
+                    <input name="password" type="password" class="form-control" id="reg-password" required>
                     <span class="password-toggle" onclick="togglePassword('reg-password')">👁️</span>
                     <div class="form-text">At least 8 characters with numbers</div>
                 </div>
                 <div class="mb-3 position-relative">
                     <label class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control" id="reg-confirm" required>
+                    <input name="confirm_password" type="password" class="form-control" id="reg-confirm" required>
                     <span class="password-toggle" onclick="togglePassword('reg-confirm')">👁️</span>
                 </div>
-                <button type="submit" class="btn btn-primary w-100">Register</button>
+                <button type="submit" name="register_btn" class="btn btn-primary w-100">Register</button>
                 <div class="text-center mt-3">
-                    Already have an account? <a href="#" onclick="showForm('login')">Login</a>
+                    Already have an account? <a href="login.php" onclick="showForm('login')">Login</a>
                 </div>
             </form>
         </div>
@@ -92,34 +92,34 @@
         }
 
         // Simulate login (for UI demo only)
-        function login() {
-            showForm('dashboard');
-        }
+        // function login() {
+        //     showForm('dashboard');
+        // }
 
-        // Simulate logout
-        function logout() {
-            showForm('login');
-        }
+        // // Simulate logout
+        // function logout() {
+        //     showForm('login');
+        // }
 
         // Show dashboard (for demo purposes)
-        function showDashboard() {
-            showForm('dashboard');
-        }
+        // function showDashboard() {
+        //     showForm('dashboard');
+        // }
 
         // Toggle password visibility
-        function togglePassword(inputId) {
-            const input = document.getElementById(inputId);
-            input.type = input.type === 'password' ? 'text' : 'password';
-        }
+        // function togglePassword(inputId) {
+        //     const input = document.getElementById(inputId);
+        //     input.type = input.type === 'password' ? 'text' : 'password';
+        // }
 
         // Demo: Make login button work
-        document.querySelector('#login-form form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            login();
-        });
+        // document.querySelector('#login-form form').addEventListener('submit', function(e) {
+        //     e.preventDefault();
+        //     login();
+        // });
 
         // Initialize - show login form first
-        showForm('login');
+        showForm('register');
     </script>
 </body>
 </html>
